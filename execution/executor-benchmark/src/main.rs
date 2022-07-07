@@ -83,10 +83,10 @@ enum Command {
         #[structopt(long, parse(from_os_str))]
         data_dir: PathBuf,
 
-        #[structopt(long, default_value = "1000000")]
+        #[structopt(long, default_value = "2000000")]
         num_accounts: usize,
 
-        #[structopt(long, default_value = "1000000")]
+        #[structopt(long, default_value = "2000000")]
         init_account_balance: u64,
     },
     RunExecutor {
@@ -110,7 +110,7 @@ enum Command {
         #[structopt(long, parse(from_os_str))]
         checkpoint_dir: PathBuf,
 
-        #[structopt(long, default_value = "1000000")]
+        #[structopt(long, default_value = "10000000")]
         num_new_accounts: usize,
 
         #[structopt(long, default_value = "1000000")]

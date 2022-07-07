@@ -132,6 +132,9 @@ fn add_accounts_impl(
     let (mut config, genesis_key) = aptos_genesis::test_utils::test_config();
     config.storage.dir = output_dir.as_ref().to_path_buf();
     config.storage.storage_pruner_config = pruner_config;
+    // Hard code pruner window.
+    config.storage.storage_pruner_config.ledger_prune_window = None;
+    config.storage.storage_pruner_config.state_store_prune_window = Some(10000000);
     let (db, executor) = init_db_and_executor(&config);
 
     let version = db.reader.get_latest_version().unwrap();
