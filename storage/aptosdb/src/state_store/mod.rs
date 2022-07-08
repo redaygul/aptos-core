@@ -36,6 +36,7 @@ use storage_interface::{
 
 use crate::{
     change_set::ChangeSet,
+    gauged_api,
     schema::{stale_node_index::StaleNodeIndexSchema, state_value::StateValueSchema},
     state_merkle_db::{add_node_batch, StateMerkleDb},
     AptosDbError, LedgerStore, TransactionStore, OTHER_TIMERS_SECONDS,
