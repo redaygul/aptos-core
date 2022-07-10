@@ -54,6 +54,7 @@ class NhcJob < ApplicationJob
     end
 
     write_status(failures.join("\n\n"))
+    results.evaluation_results
   end
 
   def write_status(status)
